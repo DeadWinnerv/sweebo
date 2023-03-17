@@ -1,0 +1,11 @@
+.Clock {
+	margin: 22px;
+	min-width: 400px;
+	&__time {
+		font-size: 80px;
+		font-family: 'Montserrat', sans-serif;
+	}
+	&__date {
+		font-size: 22px;
+	}
+}
