@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .App {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-	min-height: 100vh;
+	height: 100vh;
 	min-width: 100vh;
-	font-family: 'Montserrat', sans-serif;
 	background-image: url('https://storge.pic2.me/cm/2560x2048/123/585859ac2a3b8.jpg');
-	background-size: cover;
+	 background-size: cover;
+	 font-family: 'Montserrat', sans-serif;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: space-around;
+	 gap: 1rem;
 }

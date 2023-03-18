@@ -3,6 +3,7 @@ import { Context } from "./context";
 import LinkList from './components/LinkList/LinkList';
 import Clock from './components/Time/Clock';
 import Search from './components/Search/Search';
+import Weather from './components/Weather/Weather';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
           <Clock />
           <Search />
           <LinkList />
+          <Weather />
         </div>
       </Context>
   );

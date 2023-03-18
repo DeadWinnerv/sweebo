@@ -2,7 +2,7 @@
 	display: flex;
 	flex-flow: column wrap;
 	align-content: flex-start;
-	justify-content: start;
+	justify-content: flex-start;
 	min-width: 80%;
 	height: 60vh;
 	overflow: hidden;
@@ -40,10 +40,14 @@
 	&__add_item_input {
 		display: flex;
 		align-items: center;
-		width: 30%;
-		padding: 0.3rem;
+		width: calc(100%/3 - 15px);
+		min-height: 20px;
+		padding: 0.2rem;
 		margin: 0.2rem;
 		font-family: 'Montserrat', sans-serif;
 		outline: none;
+		border: none;
+		background-color: rgba(255,255,255,0.5);
+		backdrop-filter: blur(2px);
 	}
 }
