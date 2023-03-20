@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import styles from './Weather.module.scss'
-import { CustomContext as Context } from '../../context'
+import { AppContext as Context } from '../../context'
+import { CircularProgress } from '@mui/material'
 
 const Weather = () => {
 
@@ -9,7 +10,7 @@ const Weather = () => {
 			<div className={styles.Weather}>
 				{(weatherInfo==='loading')
 				?	<div className={styles.Weather__info}>
-						<span>loading...</span>
+						<CircularProgress />
 					</div>
 				: <div className={styles.Weather__info}>
 						<span className={styles.Weather__info__temp}>{weatherInfo.temperature}°C</span>
