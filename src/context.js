@@ -102,10 +102,14 @@ export const Context = (props) => {
   //view configs block
 
   const [userStyles, setUserStyles] = useState(
-    JSON.parse(localStorage.getItem('userStyles')) || {view: 'list', search: 'yandex'}
+    JSON.parse(localStorage.getItem('userStyles')) || {view: 'list', search: 'yandex', clockFormat: 'ru-Ru'}
   )
   const handleViewChange = (e) => {
     setUserStyles({...userStyles, view: e.currentTarget.value})
+  }
+
+  const handleClockFormatChange = (e) => {
+    setUserStyles({...userStyles, clockFormat: e.currentTarget.value})
   }
 
   useEffect(() => {
@@ -121,6 +125,7 @@ export const Context = (props) => {
     searchYandex,
     userStyles,
     handleViewChange,
+    handleClockFormatChange
   }
 
   return (

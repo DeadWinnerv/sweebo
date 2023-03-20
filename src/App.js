@@ -23,11 +23,15 @@ function App() {
         </div>
       ) : (
         <div className={styles.App}>
-          <ConfigsMenu />
-          <Clock />
-          <Search />
+          <div className={styles.header}>
+            <ConfigsMenu />
+            <div className={styles.container}>
+              <Clock />
+              <Search />
+            </div>
+            <Weather />
+          </div>
           <LinkList />
-          <Weather />
         </div>
       )}
     </Context>

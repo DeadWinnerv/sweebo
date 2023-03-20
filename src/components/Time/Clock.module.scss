@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 .Clock {
 	margin: 22px;
-	min-width: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Roboto Mono', monospace;
 	&__time {
 		font-size: 80px;
-		font-family: 'Montserrat', sans-serif;
 	}
 	&__date {
 		font-size: 22px;
