@@ -2,9 +2,16 @@ import React, { useState, useContext } from "react"
 import styles from "./ConfigsMenu.module.scss"
 import { AppContext as Context } from "../../context"
 import SettingsApplicationsSharpIcon from "@mui/icons-material/SettingsApplicationsSharp"
-import { ToggleButtonGroup, ToggleButton } from "@mui/material"
+import {
+  ToggleButtonGroup,
+  ToggleButton,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material"
 import ViewListSharpIcon from "@mui/icons-material/ViewListSharp"
 import ViewModuleSharpIcon from "@mui/icons-material/ViewModuleSharp"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
 const ConfigsMenu = () => {
   const [isVisible, setVisible] = useState(false)
@@ -12,11 +19,12 @@ const ConfigsMenu = () => {
     maxHeight: "0",
     minHeight: "0",
   })
+  const userStyles = JSON.parse(localStorage.getItem("userStyles"));
   const [viewState, setViewState] = useState(
-    JSON.parse(localStorage.getItem("userStyles"))
+    userStyles.view
   )
   const [clockFormat, setClockFormat] = useState(
-    JSON.parse(localStorage.getItem('userStyle'))
+    userStyles.clockFormat
   )
   const handleSettingsTurnClick = () => {
     setVisible(!isVisible)
@@ -61,19 +69,15 @@ const ConfigsMenu = () => {
             Формат времени
           </span>
           <ToggleButtonGroup
-          exclusive
-          value={clockFormat}
-          onChange={(e) => {
-            handleClockFormatChange(e)
-            setClockFormat(e.currentTarget.value)
-          }}
+            exclusive
+            value={clockFormat}
+            onChange={(e) => {
+              handleClockFormatChange(e)
+              setClockFormat(e.currentTarget.value)
+            }}
           >
-            <ToggleButton value={'ru-RU'}>
-              24
-            </ToggleButton>
-            <ToggleButton value={'en-En'}>
-              12
-            </ToggleButton>
+            <ToggleButton value={"ru-RU"}>24</ToggleButton>
+            <ToggleButton value={"en-En"}>12</ToggleButton>
           </ToggleButtonGroup>
         </div>
       </div>

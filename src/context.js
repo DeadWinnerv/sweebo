@@ -1,4 +1,3 @@
-import { Hidden } from "@mui/material"
 import { createContext, useState, useEffect } from "react"
 
 export const AppContext = createContext()
@@ -102,18 +101,21 @@ export const Context = (props) => {
   //view configs block
 
   const [userStyles, setUserStyles] = useState(
-    JSON.parse(localStorage.getItem('userStyles')) || {view: 'list', search: 'yandex', clockFormat: 'ru-Ru'}
+    JSON.parse(localStorage.getItem("userStyles")) || {
+      view: "list",
+      clockFormat: "ru-Ru"
+    }
   )
   const handleViewChange = (e) => {
-    setUserStyles({...userStyles, view: e.currentTarget.value})
+    setUserStyles({ ...userStyles, view: e.currentTarget.value })
   }
 
   const handleClockFormatChange = (e) => {
-    setUserStyles({...userStyles, clockFormat: e.currentTarget.value})
+    setUserStyles({ ...userStyles, clockFormat: e.currentTarget.value })
   }
 
   useEffect(() => {
-    localStorage.setItem('userStyles', JSON.stringify(userStyles))
+    localStorage.setItem("userStyles", JSON.stringify(userStyles))
   }, [userStyles])
 
   const values = {
@@ -125,7 +127,7 @@ export const Context = (props) => {
     searchYandex,
     userStyles,
     handleViewChange,
-    handleClockFormatChange
+    handleClockFormatChange,
   }
 
   return (

@@ -8,7 +8,7 @@
 	.configs_menu {
 		transition: 0.3s ease-in-out;
 		min-height: 95vh;
-		min-width: 60vh;
+		width: 60vh;
 		z-index: 1;
 		background-color: rgba(255, 255, 255, 0.4);
 		backdrop-filter: blur(5px);
@@ -17,12 +17,8 @@
 		flex-direction: column;
 		gap: 0.2rem;
 		&__item {
-			display: flex;
-			gap: 0.2rem;
-			align-items: center;
 			margin: 0.2rem;
 			background-color: rgba(255, 255, 255, 0.8);
-			justify-content: space-between;
 			&__title {
 				margin: 1rem;
 			}
