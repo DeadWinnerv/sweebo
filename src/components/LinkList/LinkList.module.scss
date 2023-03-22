@@ -66,7 +66,7 @@
 }
 
 .link_tiles {
-	width: 80%;
+	width: max-content;
 	height: 60vh;
 	display: grid;
 	gap: 0.2rem;
@@ -80,6 +80,9 @@
 		position: relative;
 		border-radius: 2px;
 		background-color: #c7c5e6;
+		padding: 0.8rem;
+		overflow: hidden;
+		width: 200px;
 		img {
 			max-height: 32px;
 			max-width: 32px;
@@ -98,7 +101,6 @@
 		padding: 0.2rem;
 		margin: 0.2rem;
 		border: none;
-		transition: 0.5s;
 	}
 	&__button:hover {
 		transition: 0.5s;
@@ -111,6 +113,7 @@
 		font-family: "Montserrat", sans-serif;
 		outline: none;
 		border: none;
+		max-width: 200px;
 		background-color: rgba(255, 255, 255, 0.5);
 		backdrop-filter: blur(2px);
 	}

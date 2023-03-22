@@ -3,7 +3,7 @@ import { createContext, useState, useEffect } from "react"
 export const AppContext = createContext()
 
 export const Context = (props) => {
-  const [linkItem, setLinkItem] = useState("")
+  const [, setLinkItem] = useState("")
   const [linkItems, setLinkItems] = useState(
     JSON.parse(localStorage.getItem("linkItems")) || [
       {
